@@ -6,6 +6,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "cell_info_table")
 class CellInfo(@PrimaryKey(autoGenerate = true) val id: Int? = null,
                val type: String,
+               val gsm_rssi: String,
                val strength: String,
                val lac: String,
                val tac: String,

@@ -19,6 +19,14 @@
         android:fontFamily="sans-serif-medium"
         android:text="@string/type"
         android:textSize="16sp" />
+    <TextView
+        android:id="@+id/gsm_rssi"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/gsm_rssi"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/strength"
