@@ -10,11 +10,11 @@
     <string name="time">Time:</string>
     <string name="altitude">Altitude:</string>
     <string name="longitude">Longitude:</string>
-    <string name="mnc">Mnc:</string>
     <string name="mcc">Mcc:</string>
     <string name="lac">Lac:</string>
     <string name="tac">Tac:</string>
     <string name="rac">Rac:</string>
     <string name="plmn">PLMN:</string>
     <string name="arfcn">ARFCN:</string>
+    <string name="mnc">Mnc:</string>
 </resources>

@@ -108,6 +108,22 @@
         android:text="@string/plmn"
         android:textSize="16sp" />
     <TextView
+        android:id="@+id/mnc"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/mnc"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/mcc"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/mcc"
+        android:textSize="16sp" />
+    <TextView
         android:id="@+id/latency"
         style="@style/word_title"
         android:layout_width="match_parent"

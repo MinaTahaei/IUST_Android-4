@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package com.example.mb2
 
 import android.Manifest
@@ -94,7 +92,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
     @SuppressLint("MissingPermission")
     fun minusOneSecond(tm: TelephonyManager){
 
