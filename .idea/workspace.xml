@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="72b1218b-4127-41ce-a7c1-ce74094d4200" name="Default Changelist" comment="" />
+    <list default="true" id="72b1218b-4127-41ce-a7c1-ce74094d4200" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rhodium/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Rhodium/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rhodium/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Rhodium/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rhodium/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Rhodium/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rhodium/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Rhodium/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +30,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Rhodium" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
