@@ -13,8 +13,9 @@ Professor: Dr. Abolfazl Diyanat
 * Serving Cell info
 * PLMN
 * LAC
-* RAC 
 * TAC
+* MNC
+* MCC
 * ARFCN
 * Cell Identity
 * UE Location
