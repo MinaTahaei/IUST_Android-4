@@ -18,6 +18,7 @@ Professor: Dr. Abolfazl Diyanat
 * ARFCN
 * Cell Identity
 * UE Location
+* Latency
 
 ## API Level : 30
 
