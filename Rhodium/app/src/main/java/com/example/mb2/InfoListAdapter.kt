@@ -25,7 +25,7 @@ class InfoListAdapter internal constructor(
         val type_ItemView: TextView = itemView.findViewById(R.id.type)
         val lac_ItemView: TextView = itemView.findViewById(R.id.lac)
         val tac_ItemView: TextView = itemView.findViewById(R.id.tac)
-        //val rac_ItemView : TextView = itemView.findViewById(R.id.rac)
+        val cid_ItemView : TextView = itemView.findViewById(R.id.cid)
         val latency_ItemView: TextView = itemView.findViewById(R.id.latency)
         val content_latency_ItemView: TextView = itemView.findViewById(R.id.content_latency)
         val plmn_ItemView : TextView = itemView.findViewById(R.id.plmn)
@@ -51,7 +51,7 @@ class InfoListAdapter internal constructor(
         holder.type_ItemView.text = "Type: ${current.type}"
         holder.lac_ItemView.text = "Lac: ${current.lac}"
         holder.tac_ItemView.text = "Tac: ${current.tac}"
-        //holder.rac_ItemView.text = "Rac: ${current.rac}"
+        holder.cid_ItemView.text = "Cid: ${current.cid}"
         holder.mnc_ItemView.text = "Mnc: ${current.mnc}"
         holder.mcc_ItemView.text = "Mcc: ${current.mcc}"
         holder.plmn_ItemView.text = "PLMN: ${current.plmn}"

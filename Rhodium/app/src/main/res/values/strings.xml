@@ -17,4 +17,5 @@
     <string name="plmn">PLMN:</string>
     <string name="arfcn">ARFCN:</string>
     <string name="mnc">Mnc:</string>
+    <string name="cell_identity">Cell Identity:</string>
 </resources>

@@ -92,12 +92,12 @@
         android:text="@string/tac"
         android:textSize="16sp" />
     <TextView
-        android:id="@+id/rac"
+        android:id="@+id/cid"
         style="@style/word_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/rac"
+        android:text="@string/cell_identity"
         android:textSize="16sp" />
     <TextView
         android:id="@+id/plmn"

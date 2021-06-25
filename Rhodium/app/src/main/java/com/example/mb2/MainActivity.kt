@@ -103,6 +103,7 @@ class MainActivity : AppCompatActivity() {
         //var rac: String = ""
         var plmn: String = ""
         var mcc: String = ""
+        var cid : String = ""
         var mnc: String = ""
         var arfcn : String = ""
         var typee: String = ""
@@ -119,6 +120,7 @@ class MainActivity : AppCompatActivity() {
                 lac = cellIdentityGsm.lac.toString()
                 mcc = cellIdentityGsm.mccString.toString()
                 mnc = cellIdentityGsm.mncString.toString()
+                cid = cellIdentityGsm.cid.toString()
                 plmn = mcc + mnc
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                     arfcn = cellIdentityGsm.arfcn.toString()
@@ -134,6 +136,7 @@ class MainActivity : AppCompatActivity() {
                 val cellIdentityWcdma: CellIdentityWcdma = cellInfo.cellIdentity
                 strength = cellSignalStrengthWcdma.dbm.toString()
                 lac = cellIdentityWcdma.lac.toString()
+                cid = cellIdentityWcdma.cid.toString()
                 mcc = cellIdentityWcdma.mccString.toString()
                 mnc = cellIdentityWcdma.mncString.toString()
                 plmn = mcc + mnc
@@ -147,6 +150,7 @@ class MainActivity : AppCompatActivity() {
             if (cellInfo is CellInfoLte) {
                 val cellSignalStrengthLte: CellSignalStrengthLte = cellInfo.cellSignalStrength
                 val cellIdentityLte: CellIdentityLte = cellInfo.cellIdentity
+                cid = cellIdentityLte.ci.toString()
                 mcc = cellIdentityLte.mccString.toString()
                 mnc = cellIdentityLte.mncString.toString()
                 plmn = mcc + mnc
@@ -188,7 +192,7 @@ class MainActivity : AppCompatActivity() {
             requestNewLocationData()
             if (current_location != null)
             {
-                val info = CellInfo(mcc=mcc,mnc = mnc,plmn=plmn,arfcn = arfcn, latency = latency, content_latency = content_latency, tac = tac, lac = lac, type = typee, gsm_rssi = gsm_rssi, strength = strength, longitude = current_location!!.longitude, altitude = current_location!!.latitude, time = System.currentTimeMillis())
+                val info = CellInfo(cid=cid,mcc=mcc,mnc = mnc,plmn=plmn,arfcn = arfcn, latency = latency, content_latency = content_latency, tac = tac, lac = lac, type = typee, gsm_rssi = gsm_rssi, strength = strength, longitude = current_location!!.longitude, altitude = current_location!!.latitude, time = System.currentTimeMillis())
                 infoViewModel.insert(info)
             }
         }

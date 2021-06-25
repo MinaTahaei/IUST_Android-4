@@ -12,7 +12,7 @@ class CellInfo(
     val arfcn: String,
     val lac: String,
     val tac: String,
-   // val rac: String,
+    val cid: String,
     val mcc : String,
     val mnc : String,
     val plmn: String,
