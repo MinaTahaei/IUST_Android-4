@@ -92,6 +92,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.P)
     @SuppressLint("MissingPermission")
     fun minusOneSecond(tm: TelephonyManager){
 
@@ -116,8 +117,8 @@ class MainActivity : AppCompatActivity() {
                 val cellSignalStrengthGsm: CellSignalStrengthGsm = cellInfo.cellSignalStrength
                 val cellIdentityGsm: CellIdentityGsm = cellInfo.cellIdentity
                 lac = cellIdentityGsm.lac.toString()
-                mcc = cellIdentityGsm.mcc.toString()
-                mnc = cellIdentityGsm.mnc.toString()
+                mcc = cellIdentityGsm.mccString.toString()
+                mnc = cellIdentityGsm.mncString.toString()
                 plmn = mcc + mnc
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                     arfcn = cellIdentityGsm.arfcn.toString()
@@ -133,8 +134,8 @@ class MainActivity : AppCompatActivity() {
                 val cellIdentityWcdma: CellIdentityWcdma = cellInfo.cellIdentity
                 strength = cellSignalStrengthWcdma.dbm.toString()
                 lac = cellIdentityWcdma.lac.toString()
-                mcc = cellIdentityWcdma.mcc.toString()
-                mnc = cellIdentityWcdma.mnc.toString()
+                mcc = cellIdentityWcdma.mccString.toString()
+                mnc = cellIdentityWcdma.mncString.toString()
                 plmn = mcc + mnc
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                     arfcn = cellIdentityWcdma.uarfcn.toString()
@@ -146,8 +147,8 @@ class MainActivity : AppCompatActivity() {
             if (cellInfo is CellInfoLte) {
                 val cellSignalStrengthLte: CellSignalStrengthLte = cellInfo.cellSignalStrength
                 val cellIdentityLte: CellIdentityLte = cellInfo.cellIdentity
-                mcc = cellIdentityLte.mcc.toString()
-                mnc = cellIdentityLte.mnc.toString()
+                mcc = cellIdentityLte.mccString.toString()
+                mnc = cellIdentityLte.mncString.toString()
                 plmn = mcc + mnc
                 tac = cellIdentityLte.tac.toString()
                 //rac
