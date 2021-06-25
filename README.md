@@ -32,5 +32,5 @@ https://trello.com/invite/b/LdOLdVEO/85fd105d871a1ea894e7c46631d2d364/android-pr
 
 ## Virtual Snippet
 <p>
-    <img src="1.png" width="240" height="400" />
+    <img src="1.png" width="200" height="400" />
 </p>
