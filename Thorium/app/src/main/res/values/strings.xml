@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Rhodium</string>
+    <string name="app_name">Thorium</string>
     <string id="shit" name="type">Type:</string>
     <string name="strength">Strength:</string>
     <string name="gsm_rssi">GSM RSSI:</string>
