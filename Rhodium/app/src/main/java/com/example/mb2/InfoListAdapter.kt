@@ -29,6 +29,7 @@ class InfoListAdapter internal constructor(
         val latency_ItemView: TextView = itemView.findViewById(R.id.latency)
         val content_latency_ItemView: TextView = itemView.findViewById(R.id.content_latency)
         val plmn_ItemView : TextView = itemView.findViewById(R.id.plmn)
+        val arfcn_Itemview: TextView = itemView.findViewById(R.id.arfcn)
 
 
     }
@@ -50,8 +51,9 @@ class InfoListAdapter internal constructor(
         holder.lac_ItemView.text = "Lac: ${current.lac}"
         holder.tac_ItemView.text = "Tac: ${current.tac}"
         holder.rac_ItemView.text = "Rac: ${current.rac}"
-        holder.plmn_ItemView.text = "Rac: ${current.plmn}"
+        holder.plmn_ItemView.text = "PLMN: ${current.plmn}"
         holder.latency_ItemView.text = "Latency: ${current.latency}"
+        holder.arfcn_Itemview.text = "ARFCN: ${current.arfcn}"
         holder.content_latency_ItemView.text = "Content Latency: ${current.content_latency}"
 
 

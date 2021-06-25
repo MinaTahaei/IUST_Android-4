@@ -16,4 +16,5 @@
     <string name="tac">Tac:</string>
     <string name="rac">Rac:</string>
     <string name="plmn">PLMN:</string>
+    <string name="arfcn">ARFCN:</string>
 </resources>

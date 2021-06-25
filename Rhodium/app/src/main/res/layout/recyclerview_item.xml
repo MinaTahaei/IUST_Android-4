@@ -65,6 +65,14 @@
         android:text="@string/longitude"
         android:textSize="16sp" />
 
+    <TextView
+        android:id="@+id/arfcn"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/arfcn"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/lac"
