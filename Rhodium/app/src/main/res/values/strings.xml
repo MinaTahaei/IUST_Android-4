@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Rhodium</string>
+    <string id="shit" name="type">Type:</string>
+    <string name="strength">Strength:</string>
+    <string name="gsm_rssi">GSM RSSI:</string>
+    <string name="umts_rscp">Umts Rscp:</string>
+    <string name="lte_rsrq">Lte Rsrq:</string>
+    <string name="lte_rsrp">Lte Rsrp:</string>
+    <string name="lte_cqi">Lte Cqi:</string>
+    <string name="time">Time:</string>
+    <string name="altitude">Altitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="mcc">Mcc:</string>
+    <string name="lac">Lac:</string>
+    <string name="tac">Tac:</string>
+    <string name="rac">Rac:</string>
+    <string name="plmn">PLMN:</string>
+    <string name="arfcn">ARFCN:</string>
+    <string name="mnc">Mnc:</string>
+    <string name="cell_identity">Cell Identity:</string>
+</resources>
