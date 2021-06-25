@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.mb2
 
 import android.Manifest
@@ -102,8 +104,9 @@ class MainActivity : AppCompatActivity() {
         var tac: String = ""
         //var rac: String = ""
         var plmn: String = ""
+        var mcc: String = ""
+        var mnc: String = ""
         var arfcn : String = ""
-
         var typee: String = ""
         val infos = tm.allCellInfo
         if (infos.size == 0){
@@ -116,7 +119,12 @@ class MainActivity : AppCompatActivity() {
                 val cellSignalStrengthGsm: CellSignalStrengthGsm = cellInfo.cellSignalStrength
                 val cellIdentityGsm: CellIdentityGsm = cellInfo.cellIdentity
                 lac = cellIdentityGsm.lac.toString()
-                arfcn = cellIdentityGsm.arfcn.toString()
+                mcc = cellIdentityGsm.mcc.toString()
+                mnc = cellIdentityGsm.mnc.toString()
+                plmn = mcc + mnc
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                    arfcn = cellIdentityGsm.arfcn.toString()
+                }
                 //rac = cellIdentityGsm.rac.toString()
                 strength = cellSignalStrengthGsm.dbm.toString()
                 gsm_rssi = cellSignalStrengthGsm.asuLevel.toString()
@@ -128,7 +136,12 @@ class MainActivity : AppCompatActivity() {
                 val cellIdentityWcdma: CellIdentityWcdma = cellInfo.cellIdentity
                 strength = cellSignalStrengthWcdma.dbm.toString()
                 lac = cellIdentityWcdma.lac.toString()
-                arfcn = cellIdentityWcdma.uarfcn.toString()
+                mcc = cellIdentityWcdma.mcc.toString()
+                mnc = cellIdentityWcdma.mnc.toString()
+                plmn = mcc + mnc
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                    arfcn = cellIdentityWcdma.uarfcn.toString()
+                }
                 //rac
                 typee = "UMTS"
 
@@ -136,9 +149,14 @@ class MainActivity : AppCompatActivity() {
             if (cellInfo is CellInfoLte) {
                 val cellSignalStrengthLte: CellSignalStrengthLte = cellInfo.cellSignalStrength
                 val cellIdentityLte: CellIdentityLte = cellInfo.cellIdentity
+                mcc = cellIdentityLte.mcc.toString()
+                mnc = cellIdentityLte.mnc.toString()
+                plmn = mcc + mnc
                 tac = cellIdentityLte.tac.toString()
                 //rac
-                arfcn = cellIdentityLte.earfcn.toString()
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                    arfcn = cellIdentityLte.earfcn.toString()
+                }
                 strength = cellSignalStrengthLte.dbm.toString()
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -172,7 +190,7 @@ class MainActivity : AppCompatActivity() {
             requestNewLocationData()
             if (current_location != null)
             {
-                val info = CellInfo(arfcn = arfcn, latency = latency, content_latency = content_latency, tac = tac, lac = lac, type = typee, gsm_rssi = gsm_rssi, strength = strength, longitude = current_location!!.longitude, altitude = current_location!!.latitude, time = System.currentTimeMillis())
+                val info = CellInfo(mcc=mcc,mnc = mnc,plmn=plmn,arfcn = arfcn, latency = latency, content_latency = content_latency, tac = tac, lac = lac, type = typee, gsm_rssi = gsm_rssi, strength = strength, longitude = current_location!!.longitude, altitude = current_location!!.latitude, time = System.currentTimeMillis())
                 infoViewModel.insert(info)
             }
         }

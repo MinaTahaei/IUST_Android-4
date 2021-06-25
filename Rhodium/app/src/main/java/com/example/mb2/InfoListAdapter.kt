@@ -50,7 +50,7 @@ class InfoListAdapter internal constructor(
         holder.type_ItemView.text = "Type: ${current.type}"
         holder.lac_ItemView.text = "Lac: ${current.lac}"
         holder.tac_ItemView.text = "Tac: ${current.tac}"
-        holder.rac_ItemView.text = "Rac: ${current.rac}"
+        //holder.rac_ItemView.text = "Rac: ${current.rac}"
         holder.plmn_ItemView.text = "PLMN: ${current.plmn}"
         holder.latency_ItemView.text = "Latency: ${current.latency}"
         holder.arfcn_Itemview.text = "ARFCN: ${current.arfcn}"
