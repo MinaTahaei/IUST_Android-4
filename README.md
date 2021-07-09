@@ -1,5 +1,5 @@
-# IUST-Android-Project-Thorium-3
-Mobile Networks Course Project - Iran University of Science and Technology - Phase 3 - Group 1
+# IUST-Android-Project-Thorium-4
+Mobile Networks Course Project - Iran University of Science and Technology - Phase 4 - Group 1
 
 ## Contributors - Group 1
 * Mina Tahaei, BSc. Computer Engineering - 96522204
@@ -8,7 +8,7 @@ Mobile Networks Course Project - Iran University of Science and Technology - Pha
 Professor: Dr. Abolfazl Diyanat
 
 
-## Project 3
+## Project 4
 **Detect the following parameters in a Mobile Network**
 * Serving Cell info
 * PLMN
@@ -21,16 +21,18 @@ Professor: Dr. Abolfazl Diyanat
 * UE Location
 * Latency
 
+**New Quality of Service Parameters added in Phase 4:**
+
 ## API Level : 30
 
 ## Trello
-https://trello.com/invite/b/LdOLdVEO/85fd105d871a1ea894e7c46631d2d364/android-project-3
+https://trello.com/invite/b/xGLXWLnL/2e3d199cf7075f5bdd0af6e5378654f8/android-project-4
 
 <p>
     <img src="trello.png" width="240" height="240" />
 </p>
 
-## Virtual Snippet
+## Virtual Snippets
 <p>
     <img src="1.jpeg" width="200" height="400" />
 </p>
