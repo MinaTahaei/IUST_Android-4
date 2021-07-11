@@ -39,6 +39,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var mFusedLocationClient: FusedLocationProviderClient
     var latency : Long = 0
     var content_latency :Long = 0
+    var jitter = 0
+    var jitter_counter = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -98,9 +100,17 @@ class MainActivity : AppCompatActivity() {
 
         var strength: String = ""
         var gsm_rssi: String = ""
+        var lte_rxlev: String = ""
+        var umts_rscp: String = ""
+        var lte_rsrp: String = ""
+        var lte_rsrq: String = ""
+        var lte_cqi: String = ""
         var lac: String = ""
         var tac: String = ""
         //var rac: String = ""
+        var upSpeed: Int = 0
+        var downSpeed: Int = 0
+
         var plmn: String = ""
         var mcc: String = ""
         var cid : String = ""
@@ -139,6 +149,7 @@ class MainActivity : AppCompatActivity() {
                 cid = cellIdentityWcdma.cid.toString()
                 mcc = cellIdentityWcdma.mccString.toString()
                 mnc = cellIdentityWcdma.mncString.toString()
+                umts_rscp = cellSignalStrengthWcdma.asuLevel.toString()
                 plmn = mcc + mnc
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                     arfcn = cellIdentityWcdma.uarfcn.toString()
@@ -162,6 +173,10 @@ class MainActivity : AppCompatActivity() {
                 strength = cellSignalStrengthLte.dbm.toString()
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    lte_rsrq = cellSignalStrengthLte.rsrq.toString()
+                    lte_rsrp = cellSignalStrengthLte.rsrp.toString()
+                    lte_cqi = cellSignalStrengthLte.cqi.toString()
+                    lte_rxlev = cellSignalStrengthLte.level.toString()
                     cellSignalStrengthLte.rsrp.toString()
                 }
                 typee = "LTE"
@@ -170,6 +185,7 @@ class MainActivity : AppCompatActivity() {
             if (cellInfo is CellInfoCdma) {
                 val cellSignalStrengthCdma: CellSignalStrengthCdma = cellInfo.cellSignalStrength
                 strength = cellSignalStrengthCdma.dbm.toString()
+                umts_rscp = cellSignalStrengthCdma.asuLevel.toString()
                 typee = "UMTS"
 
             }
@@ -180,6 +196,10 @@ class MainActivity : AppCompatActivity() {
 
             if (netInfo != null && netInfo.isConnected) {
                 val nc: NetworkCapabilities = cm.getNetworkCapabilities(cm.activeNetwork)
+                if (nc != null){
+                    downSpeed = nc.getLinkDownstreamBandwidthKbps()
+                    upSpeed = nc.getLinkUpstreamBandwidthKbps()
+                }
             }
 
             latency = latencycal("8.8.8.8")
@@ -192,7 +212,7 @@ class MainActivity : AppCompatActivity() {
             requestNewLocationData()
             if (current_location != null)
             {
-                val info = CellInfo(cid=cid,mcc=mcc,mnc = mnc,plmn=plmn,arfcn = arfcn, latency = latency, content_latency = content_latency, tac = tac, lac = lac, type = typee, gsm_rssi = gsm_rssi, strength = strength, longitude = current_location!!.longitude, altitude = current_location!!.latitude, time = System.currentTimeMillis())
+                val info = CellInfo(jitter=jitter, upSpeed=upSpeed,downSpeed = downSpeed, gsm_rssi = gsm_rssi, umts_rscp = umts_rscp, lte_rsrq = lte_rsrq, lte_rxlev = lte_rxlev, lte_rsrp = lte_rsrp, lte_cqi = lte_cqi, cid=cid,mcc=mcc,mnc = mnc,plmn=plmn,arfcn = arfcn, latency = latency, content_latency = content_latency, tac = tac, lac = lac, type = typee, strength = strength, longitude = current_location!!.longitude, altitude = current_location!!.latitude, time = System.currentTimeMillis())
                 infoViewModel.insert(info)
             }
         }
