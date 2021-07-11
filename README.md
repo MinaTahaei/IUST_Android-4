@@ -21,6 +21,7 @@ Professor: Dr. Abolfazl Diyanat
 * Cell Identity
 * UE Location
 * Latency
+* Content Latency
 
 **New Quality of Service Parameters added in Phase 4:**
 * Jitter
