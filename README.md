@@ -11,6 +11,7 @@ Professor: Dr. Abolfazl Diyanat
 ## Project 4
 **Detect the following parameters in a Mobile Network:**
 * Serving Cell info
+* Strength
 * PLMN
 * LAC
 * TAC
@@ -20,16 +21,21 @@ Professor: Dr. Abolfazl Diyanat
 * Cell Identity
 * UE Location
 * Latency
+* Content Latency
 
 **New Quality of Service Parameters added in Phase 4:**
 * Jitter
 * Ping
 * Uplink Speed
 * Downlink Speed
-* RXlev
-* RSSI
-* RSRP
-* RSRQ
+* LTE RXlev
+* GSM RSSI
+* LTE RSSI
+* UMTS RSCP
+* LTE RSRP
+* LTE RSRQ
+* LTE CQI
+* Strength
 
 
 ## API Level : 30
