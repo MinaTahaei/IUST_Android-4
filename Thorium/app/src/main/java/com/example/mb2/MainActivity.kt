@@ -14,6 +14,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.telephony.*
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
@@ -171,13 +172,11 @@ class MainActivity : AppCompatActivity() {
                     arfcn = cellIdentityLte.earfcn.toString()
                 }
                 strength = cellSignalStrengthLte.dbm.toString()
-
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     lte_rsrq = cellSignalStrengthLte.rsrq.toString()
                     lte_rsrp = cellSignalStrengthLte.rsrp.toString()
                     lte_cqi = cellSignalStrengthLte.cqi.toString()
                     lte_rxlev = cellSignalStrengthLte.level.toString()
-                    cellSignalStrengthLte.rsrp.toString()
                 }
                 typee = "LTE"
 
