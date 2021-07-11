@@ -20,4 +20,5 @@
     <string name="cell_identity">Cell Identity:</string>
     <string name="lte_rxlev">LTE RxLev:</string>
     <string name="lte_rssi">LTE RSSI:</string>
+    <string name="jitter">Jitter:</string>
 </resources>

@@ -20,14 +20,6 @@
         android:text="@string/type"
         android:textSize="16sp" />
     <TextView
-        android:id="@+id/gsm_rssi"
-        style="@style/word_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/gsm_rssi"
-        android:textSize="16sp" />
-    <TextView
         android:id="@+id/lte_rxlev"
         style="@style/word_title"
         android:layout_width="match_parent"
@@ -36,12 +28,12 @@
         android:text="@string/lte_rxlev"
         android:textSize="16sp" />
     <TextView
-        android:id="@+id/lte_rssi"
+        android:id="@+id/gsm_rssi"
         style="@style/word_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/lte_rssi"
+        android:text="@string/gsm_rssi"
         android:textSize="16sp" />
     <TextView
         android:id="@+id/umts_rscp"
@@ -83,7 +75,6 @@
         android:fontFamily="sans-serif-medium"
         android:text="@string/strength"
         android:textSize="16sp" />
-
 
     <TextView
         android:id="@+id/time"
@@ -186,6 +177,14 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:text="Content Latency: "
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/jitter"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/jitter"
         android:textSize="16sp" />
 
 </LinearLayout>

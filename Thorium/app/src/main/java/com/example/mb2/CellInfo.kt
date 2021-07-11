@@ -7,7 +7,12 @@ import androidx.room.PrimaryKey
 class CellInfo(
     @PrimaryKey(autoGenerate = true) val id: Int? = null,
     val type: String,
+    val lte_rxlev: String,
     val gsm_rssi: String,
+    val umts_rscp: String,
+    val lte_rsrp: String,
+    val lte_rsrq: String,
+    val lte_cqi: String,
     val strength: String,
     val arfcn: String,
     val lac: String,
@@ -20,6 +25,8 @@ class CellInfo(
     val altitude: Double,
     val time: Long,
     val latency: Long,
-    val content_latency: Long
-
+    val content_latency: Long,
+    val jitter: Int,
+    val upSpeed: Int,
+    val downSpeed: Int
 )
