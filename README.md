@@ -47,3 +47,17 @@ https://trello.com/invite/b/xGLXWLnL/2e3d199cf7075f5bdd0af6e5378654f8/android-pr
 </p>
 
 ## Virtual Snippets
+<p>
+    <img src="1.jpeg" width="200" height="400" />
+</p>
+<p>
+    <img src="2.jpeg" width="200" height="400" />
+</p>
+<p>
+    <img src="3.jpeg" width="200" height="400" />
+</p>
+<p>
+    <img src="4.jpeg" width="200" height="400" />
+</p>
+
+
