@@ -9,7 +9,7 @@ Professor: Dr. Abolfazl Diyanat
 
 
 ## Project 4
-**Detect the following parameters in a Mobile Network**
+**Detect the following parameters in a Mobile Network:**
 * Serving Cell info
 * PLMN
 * LAC
