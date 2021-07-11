@@ -211,6 +211,7 @@ class MainActivity : AppCompatActivity() {
             requestNewLocationData()
             if (current_location != null)
             {
+                Log.i("TEST", "" + lte_rsrp)
                 val info = CellInfo(jitter=jitter, upSpeed=upSpeed,downSpeed = downSpeed, gsm_rssi = gsm_rssi, umts_rscp = umts_rscp, lte_rsrq = lte_rsrq, lte_rxlev = lte_rxlev, lte_rsrp = lte_rsrp, lte_cqi = lte_cqi, cid=cid,mcc=mcc,mnc = mnc,plmn=plmn,arfcn = arfcn, latency = latency, content_latency = content_latency, tac = tac, lac = lac, type = typee, strength = strength, longitude = current_location!!.longitude, altitude = current_location!!.latitude, time = System.currentTimeMillis())
                 infoViewModel.insert(info)
             }

@@ -3,6 +3,7 @@ package com.example.mb2
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.Resources
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -51,12 +52,13 @@ class InfoListAdapter internal constructor(
         val current = infos[position]
 
         holder.strengthItemView.text = "Strength: ${current.strength}"
-        holder.strengthItemView.text = "GSM RSSI: ${current.gsm_rssi}"
-        holder.strengthItemView.text = "LTE RxLev: ${current.lte_rxlev}"
-        holder.strengthItemView.text = "LTE RSRP: ${current.lte_rsrp}"
-        holder.strengthItemView.text = "LTE RSRQ: ${current.lte_rsrq}"
-        holder.strengthItemView.text = "LTE CQI: ${current.lte_cqi}"
-        holder.strengthItemView.text = "UMTS RSCP: ${current.umts_rscp}"
+        holder.gsm_rssi_ItemView.text = "GSM RSSI: ${current.gsm_rssi}"
+        holder.lte_rxlev_ItemView.text = "LTE RxLev: ${current.lte_rxlev}"
+        holder.lte_rsrp_ItemView.text = "LTE RSRP: ${current.lte_rsrp}"
+        Log.i("TEST 2", "" + current.lte_rsrp)
+        holder.lte_rsrq_ItemView.text = "LTE RSRQ: ${current.lte_rsrq}"
+        holder.lte_cqi_ItemView.text = "LTE CQI: ${current.lte_cqi}"
+        holder.umts_rscp_ItemView.text = "UMTS RSCP: ${current.umts_rscp}"
         holder.time_ItemView.text = "Time: ${current.time}"
         holder.altitude_ItemView.text = "Altitude: ${current.altitude}"
         holder.longitude_ItemView.text = "Longitude: ${current.longitude}"
