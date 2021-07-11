@@ -3,10 +3,10 @@
     <string id="shit" name="type">Type:</string>
     <string name="strength">Strength:</string>
     <string name="gsm_rssi">GSM RSSI:</string>
-    <string name="umts_rscp">Umts Rscp:</string>
-    <string name="lte_rsrq">Lte Rsrq:</string>
-    <string name="lte_rsrp">Lte Rsrp:</string>
-    <string name="lte_cqi">Lte Cqi:</string>
+    <string name="umts_rscp">UMTS RSCP:</string>
+    <string name="lte_rsrq">LTE RSRQ:</string>
+    <string name="lte_rsrp">LTE RSRP:</string>
+    <string name="lte_cqi">LTE CQI:</string>
     <string name="time">Time:</string>
     <string name="altitude">Altitude:</string>
     <string name="longitude">Longitude:</string>
@@ -18,4 +18,6 @@
     <string name="arfcn">ARFCN:</string>
     <string name="mnc">Mnc:</string>
     <string name="cell_identity">Cell Identity:</string>
+    <string name="lte_rxlev">LTE RxLev:</string>
+    <string name="lte_rssi">LTE RSSI:</string>
 </resources>

@@ -27,7 +27,54 @@
         android:fontFamily="sans-serif-medium"
         android:text="@string/gsm_rssi"
         android:textSize="16sp" />
-
+    <TextView
+        android:id="@+id/lte_rxlev"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lte_rxlev"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/lte_rssi"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lte_rssi"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/umts_rscp"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/umts_rscp"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/lte_rsrp"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lte_rsrp"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/lte_rsrq"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lte_rsrq"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/lte_cqi"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lte_cqi"
+        android:textSize="16sp" />
     <TextView
         android:id="@+id/strength"
         style="@style/word_title"
