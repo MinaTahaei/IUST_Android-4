@@ -18,6 +18,11 @@ class InfoListAdapter internal constructor(
 
     inner class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val gsm_rssi_ItemView: TextView = itemView.findViewById(R.id.gsm_rssi)
+        val lte_rxlev_ItemView : TextView = itemView.findViewById(R.id.lte_rxlev)
+        val lte_rsrp_ItemView : TextView = itemView.findViewById(R.id.lte_rsrp)
+        val lte_rsrq_ItemView : TextView = itemView.findViewById(R.id.lte_rsrq)
+        val lte_cqi_ItemView : TextView = itemView.findViewById(R.id.lte_cqi)
+        val umts_rscp_ItemView: TextView = itemView.findViewById(R.id.umts_rscp)
         val strengthItemView: TextView = itemView.findViewById(R.id.strength)
         val time_ItemView: TextView = itemView.findViewById(R.id.time)
         val altitude_ItemView: TextView = itemView.findViewById(R.id.altitude)
@@ -32,6 +37,7 @@ class InfoListAdapter internal constructor(
         val arfcn_ItemView: TextView = itemView.findViewById(R.id.arfcn)
         val mnc_ItemView: TextView = itemView.findViewById(R.id.mnc)
         val mcc_ItemView: TextView = itemView.findViewById(R.id.mcc)
+        val jitter_ItemView: TextView = itemView.findViewById(R.id.jitter)
 
     }
 
@@ -45,6 +51,12 @@ class InfoListAdapter internal constructor(
         val current = infos[position]
 
         holder.strengthItemView.text = "Strength: ${current.strength}"
+        holder.strengthItemView.text = "GSM RSSI: ${current.gsm_rssi}"
+        holder.strengthItemView.text = "LTE RxLev: ${current.lte_rxlev}"
+        holder.strengthItemView.text = "LTE RSRP: ${current.lte_rsrp}"
+        holder.strengthItemView.text = "LTE RSRQ: ${current.lte_rsrq}"
+        holder.strengthItemView.text = "LTE CQI: ${current.lte_cqi}"
+        holder.strengthItemView.text = "UMTS RSCP: ${current.umts_rscp}"
         holder.time_ItemView.text = "Time: ${current.time}"
         holder.altitude_ItemView.text = "Altitude: ${current.altitude}"
         holder.longitude_ItemView.text = "Longitude: ${current.longitude}"
@@ -58,6 +70,7 @@ class InfoListAdapter internal constructor(
         holder.latency_ItemView.text = "Latency: ${current.latency}"
         holder.arfcn_ItemView.text = "ARFCN: ${current.arfcn}"
         holder.content_latency_ItemView.text = "Content Latency: ${current.content_latency}"
+        holder.jitter_ItemView.text = "Jitter: ${current.jitter}"
 
 
 
@@ -70,11 +83,19 @@ class InfoListAdapter internal constructor(
             }
             if (current.type != "LTE")
             {
+                parent.removeView(holder.lte_rsrq_ItemView)
+                parent.removeView(holder.lte_rsrp_ItemView)
+                parent.removeView(holder.lte_cqi_ItemView)
+                parent.removeView(holder.lte_rxlev_ItemView)
                 parent.removeView(holder.tac_ItemView)
             }
             if (current.type == "LTE")
             {
                 parent.removeView(holder.lac_ItemView)
+            }
+            if (current.type != "UMTS")
+            {
+                parent.removeView(holder.umts_rscp_ItemView)
             }
         }
         catch (a: TypeCastException)
