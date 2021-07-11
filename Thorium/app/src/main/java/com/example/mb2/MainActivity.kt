@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                         val mainHandler = Handler(Looper.getMainLooper())
 
                         mainHandler.post(object : Runnable {
-                            @RequiresApi(Build.VERSION_CODES.M)
+                            @RequiresApi(Build.VERSION_CODES.P)
                             override fun run() {
                                 minusOneSecond(tm)
                                 mainHandler.postDelayed(this, 5000)
