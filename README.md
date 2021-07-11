@@ -29,7 +29,7 @@ Professor: Dr. Abolfazl Diyanat
 * Uplink Speed
 * Downlink Speed
 * LTE RXlev
-* LTE RSSI
+* GSM RSSI
 * UMTS RSCP
 * LTE RSRP
 * LTE RSRQ
