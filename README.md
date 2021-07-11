@@ -25,7 +25,7 @@ Professor: Dr. Abolfazl Diyanat
 
 **New Quality of Service Parameters added in Phase 4:**
 * Jitter
-* Ping
+* Ping => Included in latency and content latency
 * Uplink Speed
 * Downlink Speed
 * LTE RXlev
