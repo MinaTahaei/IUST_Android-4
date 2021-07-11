@@ -121,8 +121,11 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
             val snip = "Strength: " + cellInfo.strength + "\n" +
                     "PLMN: " + cellInfo.mcc + cellInfo.mnc + "\n" +
+                    "up speed: " + cellInfo.upSpeed + " kb/sec\n" +
+                    "down speed: " + cellInfo.downSpeed + " kb/sec\n" +
                     "latency: " + cellInfo.latency + " ms\n" +
-                    "content latency: " + cellInfo.content_latency + " ms\n"
+                    "content latency: " + cellInfo.content_latency + " ms\n" +
+                    "jitter: " + cellInfo.jitter + " ms"
             val marker = mMap.addMarker(MarkerOptions().icon(
                 BitmapDescriptorFactory.defaultMarker(color)).position(
                 pos).title(cellInfo.type).snippet(snip))

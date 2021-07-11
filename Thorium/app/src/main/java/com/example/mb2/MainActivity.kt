@@ -271,7 +271,14 @@ class MainActivity : AppCompatActivity() {
             }else{
                 pingg = 999999999
             }
-
+            if (jitter_counter != 0 && pingg != 999999999.toLong() && latency != 999999999.toLong()){
+                var pingg2 = pingg.toInt()
+                var pingg3 = kotlin.math.abs((pingg2 - latency).toInt())
+                jitter = (((jitter_counter-1)*jitter)+(pingg3)) / jitter_counter
+                jitter_counter++
+            }else if (jitter_counter == 0){
+                jitter_counter++
+            }
 //            latency = pingg
         } catch (ignore: InterruptedException) {
             ignore.printStackTrace()
@@ -305,6 +312,4 @@ class MainActivity : AppCompatActivity() {
         }
         return pingg
     }
-
-
 }
